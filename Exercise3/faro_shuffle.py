@@ -1,0 +1,18 @@
+original_deck = input().split()
+shuffles = int(input())
+
+deck = original_deck
+divider = int(len(original_deck) / 2)
+
+for _ in range(shuffles):
+    new_deck = []
+    first_half = deck[0:divider]
+    second_half = deck[divider:]
+
+    for i in range(divider):
+        new_deck.append(first_half[i])
+        new_deck.append(second_half[i])
+
+    deck = new_deck
+
+print(deck)
